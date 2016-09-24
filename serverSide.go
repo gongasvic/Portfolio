@@ -21,7 +21,7 @@ func (p *Page) save() error{
 
 
 func indexHandler(c *gin.Context) {
-    c.HTML(http.StatusOK, "index.tmpl", gin.H{
+    c.HTML(http.StatusOK, "welcome.tmpl" , gin.H{
     		"title" : "Welcome to my Portfolio",
     		})
 }
@@ -57,8 +57,10 @@ func main() {
     r.Use(gin.Logger())
 
     html := template.Must(template.ParseFiles(
-        "./templates/index.tmpl",
+        "./templates/header.tmpl",
+        "./templates/carroussel.tmpl",
         "./templates/404.tmpl",
+        "./templates/welcome.tmpl",
         "./templates/view/index.tmpl",
         "./templates/view/about.tmpl"))
     r.SetHTMLTemplate(html)

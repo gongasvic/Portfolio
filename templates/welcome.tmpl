@@ -1,0 +1,63 @@
+{{ define "welcome.tmpl" }}
+<html>
+
+<header>
+	{{template "header" .}}
+
+	<style type="text/css">
+		.carousel{
+		    background: #2f4357;
+		    margin-top: 20px;
+		}
+		.carousel .item img{
+		    margin: 0 auto; /* Align slide image horizontally center */
+		}
+		.bs-example{
+			margin: 20px;
+		}
+	</style>
+</header>
+<body>
+<div class="container-fluid">
+
+	<div class="page-header" style="text-align: center;">
+	    <h1>{{ .title }}</h1>
+	</div>
+<div class="row">
+		<div class="col-md-12">
+		<div class="jumbotron">
+		<div class="row">
+			<h1>Gonçalo Filipe Lampreia Vicente</h1>
+		</div>
+			<div class="row">
+			<div class="col-md-3">
+					<h3>Date of Birth:</h3> August, 4 1994
+					<h3>Current profession:</h3>
+					Junior Developer Relations at <a href="http://sourced.tech/about/">source{d}</a>
+			</div>
+			<div class="col-md-3" >
+					<h3>Born:</h3> Lisbon, Portugal
+					<h3>Current City:</h3> Madrid, Spain
+			</div>
+			<div class="col-md-6" style="text-align: justify-all;">
+					<h3>Who I am:</h3> I'm a very funy, easy-going, lively and professional.
+					I am used to multi-cultural environments, I have traveled to some places, studied abroad, currently working abroad. 
+					<h3>What can I bring to a Job:</h3> I can bring a very motivated and always ready to learn co-worker, I'm very friendly and love to help out when I can. I like to work in teams.
+			</div>
+
+			</div>
+<br>
+			<div class="row">
+				<p><a class="btn btn-primary btn-lg" href="#About_me" role="button">Learn more</a></p>
+			</div>
+		</div>
+	</div>
+</div><!--closes jumbotron Row -->
+
+
+	
+</div><!--closes container -->
+</body>
+
+</html>
+{{ end }}

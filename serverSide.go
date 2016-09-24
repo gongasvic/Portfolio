@@ -33,13 +33,9 @@ func viewHandler(r *gin.Context){
       
         s := []string{title, "tmpl"}
         z := strings.Join(s, ".")
-        test, err := r.HTML(http.StatusOK, z, gin.H{
+        r.HTML(http.StatusOK, z, gin.H{
             "title" : title,
             })
-        if err != nil {
-            noRoute(r)
-        }
-        defer test.Body.Close()
       
     }else{
         r.HTML(http.StatusOK, "index.tmpl", gin.H{
@@ -54,21 +50,17 @@ func noRoute(r *gin.Context){
         })
 }
 
-func setTemplates(){
-    template.Must(template.ParseFiles(
-        "./templates/index.tmpl",
-        "./templates/404.tmpl",
-        "./templates/view/index.tmpl",
-        "./templates/view/about.tmpl"))
-}
-
 
 func main() {
     // Creates a router without any middleware by default
     r := gin.New()
     r.Use(gin.Logger())
 
-    html := setTemplates()
+    html := template.Must(template.ParseFiles(
+        "./templates/index.tmpl",
+        "./templates/404.tmpl",
+        "./templates/view/index.tmpl",
+        "./templates/view/about.tmpl"))
     r.SetHTMLTemplate(html)
 
     r.GET("/", indexHandler)

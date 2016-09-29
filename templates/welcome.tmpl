@@ -15,8 +15,14 @@
 		.bs-example{
 			margin: 20px;
 		}
+		#me{
+			text-align: justify;
+		}
+		body { padding-bottom: 70px; }
+
 	</style>
 </header>
+
 <body>
 <div class="container-fluid">
 
@@ -25,11 +31,13 @@
 	</div>
 <div class="row">
 		<div class="col-md-12">
-		<div class="jumbotron">
 		<div class="row">
-			<h1>Gonçalo Filipe Lampreia Vicente</h1>
+			<div class="col-md-12">
+				<h1>Gonçalo Filipe Lampreia Vicente</h1>
+			</div>
 		</div>
 			<div class="row">
+				<div class="col-md-12">
 			<div class="col-md-3">
 					<h3>Date of Birth:</h3> August, 4 1994
 					<h3>Current profession:</h3>
@@ -39,20 +47,42 @@
 					<h3>Born:</h3> Lisbon, Portugal
 					<h3>Current City:</h3> Madrid, Spain
 			</div>
-			<div class="col-md-6" style="text-align: justify-all;">
-					<h3>Who I am:</h3> I'm a very funy, easy-going, lively and professional.
+			<div class="col-md-6" id="me">
+					<h3 style="text-align: center">Who I am</h3> I'm a very funy, easy-going, lively and professional.
 					I am used to multi-cultural environments, I have traveled to some places, studied abroad, currently working abroad. 
-					<h3>What can I bring to a Job:</h3> I can bring a very motivated and always ready to learn co-worker, I'm very friendly and love to help out when I can. I like to work in teams.
+					<h3 style="text-align: center">What can I bring to a company</h3> I can bring a very motivated and always ready to
+					learn co-worker, I'm very friendly and love to help out when I can. I like to work in teams.
 			</div>
-
+				</div>
 			</div>
 <br>
 			<div class="row">
-				<p><a class="btn btn-primary btn-lg" href="#About_me" role="button">Learn more</a></p>
+				<div class="col-md-12">
+
+				<p><a class="btn btn-primary btn-lg" href="view/index" role="button">Learn more</a></p>
+				</div>
 			</div>
-		</div>
 	</div>
 </div><!--closes jumbotron Row -->
+
+  <div class="container-fliuid">
+<nav class="navbar navbar-default navbar-fixed-bottom">
+		
+	<div class="col-md-3"></div>
+	<div class="col-md-6">
+     <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Gonçalo Vicente<span class="sr-only">(current)</span></a></li>
+        <li><a href="view/index">About me</a></li>
+        <li><a href="view/index">My projects</a></li>
+        <li><a href="view/index">My Carrer</a></li>
+        <li><a href="view/index">Get In touch</a></li>
+		  </ul>
+	</div>
+<!--	not working, need to alight this to the bottom right corner-->
+	<div class="col-md-3" style="height: inherit;text-align: right;vertical-align: bottom"><small>©Copyrights reserved Gonçalo Vicente 2016</small></div>
+	  
+  </div>
+</nav>
 
 
 	

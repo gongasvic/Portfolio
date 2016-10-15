@@ -1,0 +1,100 @@
+{{ define "menu" }}
+
+<script type="text/javascript">
+
+
+function teste1(argument) {
+  switch(argument){
+    case 0:
+      document.getElementsByClassName("visible")[0].style.display = "none";
+      document.getElementsByClassName("visible")[0].className = "";
+
+      document.getElementsByClassName("active")[0].className = "";
+      document.getElementById('welcome').className = "active";
+
+      document.getElementById('pageContent').className = "visible";
+      document.getElementById('pageContent').style.display = "block";
+
+      break;
+
+    case 1:
+      document.getElementsByClassName("visible")[0].style.display = "none";
+      document.getElementsByClassName("visible")[0].className = "";
+
+      document.getElementsByClassName("active")[0].className = "";
+      document.getElementById('about').className = "active";
+
+      document.getElementById('pageContent1').className = "visible";
+      document.getElementById('pageContent1').style.display = "block";
+
+      break;
+    case 2:
+      document.getElementsByClassName("visible")[0].style.display = "none";
+      document.getElementsByClassName("visible")[0].className = "";
+
+      document.getElementsByClassName("active")[0].className = "";
+      document.getElementById('projects').className = "active";
+
+      document.getElementById('pageContent2').className = "visible";
+      document.getElementById('pageContent2').style.display = "block";
+
+      break;
+    case 3:
+      //alert(document.getElementsByClassName("active")[0].id);
+
+      document.getElementsByClassName("visible")[0].style.display = "none";
+      document.getElementsByClassName("visible")[0].className = "";
+
+      document.getElementsByClassName("active")[0].className = "";
+      document.getElementById('career').className = "active";
+
+      document.getElementById('pageContent3').className = "visible";
+      document.getElementById('pageContent3').style.display = "block";
+
+      break;
+    case 4:
+      document.getElementsByClassName("visible")[0].style.display = "none";
+      document.getElementsByClassName("visible")[0].className = "";
+
+      document.getElementsByClassName("active")[0].className = "";
+      document.getElementById('contact').className = "active";
+
+      document.getElementById('pageContent4').className = "visible";
+      document.getElementById('pageContent4').style.display = "block";
+
+      break;
+  }
+}
+
+</script>
+
+<div class="container-fliuid">
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+	<div class="col-md-3"></div>
+	<div class="col-md-6 collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+     <ul class="nav navbar-nav">
+        <li id="welcome" onclick="teste1(0)" class="active"><a href="#" >Gonçalo Vicente</a></li>
+        <li id="about" onclick="teste1(1)"><a href="#">About me</a></li>
+        <li id="projects" onclick="teste1(2)"><a href="#">My projects</a></li>
+        <li id="career" onclick="teste1(3)"><a href="#">My Career</a></li>
+        <li id="contact" onclick="teste1(4)"><a href="#">Get In touch</a></li>
+		  </ul>
+	</div>
+<!--	not working, need to alight this to the bottom right corner-->
+	<div class="col-md-3" style="direction: rtl;position: absolute;right: 0px" ><small >©Copyrights reserved Gonçalo Vicente 2016</small></div>
+  </div>
+</nav>
+
+
+	
+</div><!--closes container -->
+
+{{end}}

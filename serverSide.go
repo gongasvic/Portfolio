@@ -2,11 +2,9 @@ package main
 
 import (
     "io/ioutil"
-    //"fmt"
     "github.com/gin-gonic/gin"
     "net/http"
     "html/template"
-    "strings"
 )
 
 type Page struct {
@@ -26,24 +24,6 @@ func indexHandler(c *gin.Context) {
     		})
 }
 
-func viewHandler(r *gin.Context){
-	//compare to a certain list of possibilities if it is in display else discard to 404
-    title := r.Param("action")[1:]
-    if title != "" {
-      
-        s := []string{title, "tmpl"}
-        z := strings.Join(s, ".")
-        r.HTML(http.StatusOK, z, gin.H{
-            "title" : title,
-            })
-      
-    }else{
-        r.HTML(http.StatusOK, "index.tmpl", gin.H{
-                "title" : "index",
-                })
-    }
-}
-
 func noRoute(r *gin.Context){
         r.HTML(http.StatusOK, "404.tmpl", gin.H{
                 "title" : "Something is not right",
@@ -59,17 +39,15 @@ func main() {
     html := template.Must(template.ParseFiles(
         "./templates/header.tmpl",
         "./templates/menu.tmpl",
-        "./templates/carroussel.tmpl",
         "./templates/404.tmpl",
         "./templates/welcome.tmpl",
         "./templates/GodPage.tmpl",
-        "./templates/view/index.tmpl",
-        "./templates/view/projects.tmpl",
-		"./templates/JavaScript/JavaScript.js"))
+        "./templates/index.tmpl",
+        "./templates/projects.tmpl"))
+
     r.SetHTMLTemplate(html)
 
-    r.GET("/", indexHandler)
-    //r.GET("/view/*action", viewHandler)
-    //r.NoRoute(noRoute)
+    r.GET("/*action", indexHandler)
+    r.NoRoute(noRoute)
     r.Run(":8080")
 }

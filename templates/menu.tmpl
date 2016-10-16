@@ -1,7 +1,7 @@
 {{ define "menu" }}
 
 <script type="text/javascript">
-
+  
 
 function teste1(argument) {
   switch(argument){
@@ -14,7 +14,7 @@ function teste1(argument) {
 
       document.getElementById('pageContent').className = "visible";
       document.getElementById('pageContent').style.display = "block";
-
+      changeBG(0);
       break;
 
     case 1:
@@ -22,7 +22,7 @@ function teste1(argument) {
       document.getElementsByClassName("visible")[0].className = "";
 
       document.getElementsByClassName("active")[0].className = "";
-      document.getElementById('about').className = "active";
+      document.getElementById('skills').className = "active";
 
       document.getElementById('pageContent1').className = "visible";
       document.getElementById('pageContent1').style.display = "block";
@@ -40,7 +40,6 @@ function teste1(argument) {
 
       break;
     case 3:
-      //alert(document.getElementsByClassName("active")[0].id);
 
       document.getElementsByClassName("visible")[0].style.display = "none";
       document.getElementsByClassName("visible")[0].className = "";
@@ -57,10 +56,21 @@ function teste1(argument) {
       document.getElementsByClassName("visible")[0].className = "";
 
       document.getElementsByClassName("active")[0].className = "";
-      document.getElementById('contact').className = "active";
+      document.getElementById('about').className = "active";
 
       document.getElementById('pageContent4').className = "visible";
       document.getElementById('pageContent4').style.display = "block";
+      changeBG(4);
+      break;
+    case 5:
+      document.getElementsByClassName("visible")[0].style.display = "none";
+      document.getElementsByClassName("visible")[0].className = "";
+
+      document.getElementsByClassName("active")[0].className = "";
+      document.getElementById('contact').className = "active";
+
+      document.getElementById('pageContent5').className = "visible";
+      document.getElementById('pageContent5').style.display = "block";
 
       break;
   }
@@ -81,15 +91,16 @@ function teste1(argument) {
 	<div class="col-md-3"></div>
 	<div class="col-md-6 collapse navbar-collapse" id="bs-example-navbar-collapse-1">
      <ul class="nav navbar-nav">
-        <li id="welcome" onclick="teste1(0)" class="active"><a href="#" >Gonçalo Vicente</a></li>
-        <li id="about" onclick="teste1(1)"><a href="#">About me</a></li>
-        <li id="projects" onclick="teste1(2)"><a href="#">My projects</a></li>
-        <li id="career" onclick="teste1(3)"><a href="#">My Career</a></li>
-        <li id="contact" onclick="teste1(4)"><a href="#">Get In touch</a></li>
+        <li id="welcome" onclick="teste1(0)" class="active"><a >Gonçalo Vicente</a></li>
+        <li id="skills" onclick="teste1(1)"><a>Skills</a></li>
+        <li id="projects" onclick="teste1(2)"><a>My projects</a></li>
+        <li id="career" onclick="teste1(3)"><a >My Career</a></li>
+        <li id="about" onclick="teste1(4)"><a>Goals</a></li>
+        <li id="contact" onclick="teste1(5)"><a >Get In touch</a></li>
 		  </ul>
 	</div>
 <!--	not working, need to alight this to the bottom right corner-->
-	<div class="col-md-3" style="direction: rtl;position: absolute;right: 0px" ><small >©Copyrights reserved Gonçalo Vicente 2016</small></div>
+	<div class="col-md-3" style="direction: rtl;position: absolute;right: 0px; color: black;" ><small>©Copyrights reserved Gonçalo Vicente 2016</small></div>
   </div>
 </nav>
 

@@ -11,16 +11,21 @@
 <body>
 	{{template "menu" .}}
 
-<div id="pageContent" style="display: block;" class="visible">{{template "welcome" .}}</div>
+<div class="container-fluid element">
 
-<div id="pageContent1" style="display: none;">{{template "index" .}}</div>
+	<div id="pageContent" style="display: block;" class="visible">{{template "welcome" .}}</div>
 
-<div id="pageContent2" style="display: none;">{{template "welcome" .}}</div>
+	<div id="pageContent1" style="display: none;">{{template "welcome" .}}</div>
 
-<div id="pageContent3" style="display: none;">{{template "index" .}}</div>
+	<div id="pageContent2" style="display: none;">{{template "welcome" .}}</div>
 
-<div id="pageContent4" style="display: none;">{{template "welcome" .}}</div>
+	<div id="pageContent3" style="display: none;">{{template "index" .}}</div>
 
+	<div id="pageContent4" style="display: none;">{{template "index" .}}</div>
+
+	<div id="pageContent5" style="display: none;">{{template "index" .}}</div>
+
+</div>
 </body>
 
 </html>

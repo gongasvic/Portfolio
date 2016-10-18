@@ -14,7 +14,7 @@ function teste1(argument) {
 
       document.getElementById('pageContent').className = "visible";
       document.getElementById('pageContent').style.display = "block";
-      changeBG(0);
+      changeBG(argument);
       break;
 
     case 1:
@@ -26,6 +26,7 @@ function teste1(argument) {
 
       document.getElementById('pageContent1').className = "visible";
       document.getElementById('pageContent1').style.display = "block";
+      changeBG(argument);
 
       break;
     case 2:
@@ -60,7 +61,7 @@ function teste1(argument) {
 
       document.getElementById('pageContent4').className = "visible";
       document.getElementById('pageContent4').style.display = "block";
-      changeBG(4);
+      changeBG(argument);
       break;
     case 5:
       document.getElementsByClassName("visible")[0].style.display = "none";

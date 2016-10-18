@@ -42,6 +42,7 @@ func main() {
         "./templates/404.tmpl",
         "./templates/welcome.tmpl",
         "./templates/GodPage.tmpl",
+        "./templates/skills.tmpl",
         "./templates/index.tmpl",
         "./templates/projects.tmpl"))
 

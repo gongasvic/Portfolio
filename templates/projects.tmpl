@@ -1,39 +1,145 @@
 {{ define "projects" }}
+	
+<script type="text/javascript">
+
+var e = 99;
+var p = 99;
+
+function selectEmp(argument){
+	document.getElementsByClassName("empresa")[0].style.display = "none";
+	document.getElementsByClassName("empresa")[0].className = "";
+
+	if (e == argument) {
+			e=99;
+			return;
+	}
+	e=argument;
+	switch(argument){
+		case 0:
+			document.getElementById('poweradvance').className = "empresa";
+			document.getElementById('poweradvance').style.display = "block";
+			break;
+	    case 1:
+			document.getElementById('vodafone').className = " empresa";
+			document.getElementById('vodafone').style.display = "block";
+			
+			break;
+	  }
+}
+
+function selectProj(argument){
+	document.getElementsByClassName("projecto")[0].style.display = "none";
+	document.getElementsByClassName("projecto")[0].className = "";
+	if (p == argument) {
+			p=99;
+			return;
+	}
+	p=argument;
+	switch(argument){
+		case 0:
+			document.getElementById('KITT').className = "projecto";
+			document.getElementById('KITT').style.display = "block";
+			break;
+	    case 1:
+			document.getElementById('Naval').className = " projecto";
+			document.getElementById('Naval').style.display = "block";
+			break;
+		case 2:
+
+			document.getElementById('server').className = " projecto";
+			document.getElementById('server').style.display = "block";
+			break;
+		case 3:
+
+			document.getElementById('Frogger').className = " projecto";
+			document.getElementById('Frogger').style.display = "block";
+			break;
+		case 4:
+
+			document.getElementById('Flister').className = " projecto";
+			document.getElementById('Flister').style.display = "block";
+			break;
+		case 5:
+
+			document.getElementById('Ecommerce').className = " projecto";
+			document.getElementById('Ecommerce').style.display = "block";
+			break;
+	  }
+}
+</script>
 
 
-<div style="text-align: center;">
-    <h1>What I've done so far</h1>
-</div>
+	<div style="text-align: center;">
+	    <h1 id="MainTitle">What I have done?</h1>
+	</div>
 
 
 
 <!--work related -->
 
 <div class="row">
+  <div class="col-md-6" style="text-align: justify-all;">
   	<h1 style="text-align: center;"> Places I have worked in</h1>
-  <div class="col-md-8">
-	  <div class="jumbotron">
-		  <h1>PowerAdvance</h1>
-		  <p style="text-align: justify-all;">
+	  <h1 onclick="selectEmp(0)">PowerAdvance</h1>
+	  <h1 onclick="selectEmp(1)">Vodafone Corporate Store</h1>
+  		<div class="empresa" id="poweradvance" style="text-align: justify-all; display: none;">
 		 	I have Worked in <a href="http://www.poweradvance.pt/"> PowerAdvance </a> as a Technician, repaired computers, both laptops and desktops, was also responsible for training the interns who were studying in professional courses. <br>
 			This company is smal with 2-10 people, with a store both physical and now with an online store.<br>
-			Experience: 6 months</p>
+			Experience: 6 months
 		</div>
-	</div>
 
-</div>
-
-<div class="row">
-  <div class="col-md-8">
-    <div class="jumbotron">
-		  <h1>Vodafone Corporate Store</h1>
-		  <p style="text-align: justify-all;">
+ 		 <div class="empresa" style="display: none;" id="vodafone">
 		 	From there i went to work at <a href="http://negocios.vodafone.pt/"> Vodafone Corporate Store </a> as a salesman at Cascais Shopping, worked at the store as a sales associate and client manager, we worked as a team of 6 people. The job composed of two sides, the first is to find the tools that fit the clients need in terms of Telecomunications. The second side is to provide customer support and manage complaints to minimize the problem and provide a fast and adequate solution. <br>
   			This company is a Multinational company but the store team was composed of 6 member and 1 region manager.<br>
   			Experience: 1 year
-  			</p>
-	</div>
-  </div>
 
+  		</div>
+</div>
+	<div class="col-md-6" style="text-align: justify-all;">
+  		<h1 style="text-align: center;"> Projects I have done </h1>
+  		<h1 onclick="selectProj(0)">KITT - HTML+CSS+JavaScript w/ JQuery</h1>
+  		<h1 onclick="selectProj(1)">Naval Division - PHP+MySQL</h1>
+  		<h1 onclick="selectProj(2)">OS Server Request Simulation - C</h1>
+  		<h1 onclick="selectProj(3)">Frogger Game - C++</h1>
+  		<h1 onclick="selectProj(4)">Flister comercial - Ruby on Rails</h1>
+  		<h1 onclick="selectProj(5)">E-commerce codechallenge - Ruby on Rails</h1>
+
+  		<div class="projecto" style="display: none;" id="KITT">
+		 	From there i went to work at <a href="http://negocios.vodafone.pt/"> Vodafone Corporate Store </a> as a salesman at Cascais Shopping, worked at the store as a sales associate and client manager, we worked as a team of 6 people. The job composed of two sides, the first is to find the tools that fit the clients need in terms of Telecomunications. The second side is to provide customer support and manage complaints to minimize the problem and provide a fast and adequate solution. <br>
+  			This company is a Multinational company but the store team was composed of 6 member and 1 region manager.<br>
+  			Experience: 1 year
+
+  		</div>
+  		<div class="projecto" style="display: none;" id="Naval">
+		 	From there i went to work at <a href="http://negocios.vodafone.pt/"> Vodafone Corporate Store </a> as a salesman at Cascais Shopping, worked at the store as a sales associate and client manager, we worked as a team of 6 people. The job composed of two sides, the first is to find the tools that fit the clients need in terms of Telecomunications. The second side is to provide customer support and manage complaints to minimize the problem and provide a fast and adequate solution. <br>
+  			This company is a Multinational company but the store team was composed of 6 member and 1 region manager.<br>
+  			Experience: 1 year
+
+  		</div>
+  		<div class="projecto" style="display: none;" id="server">
+		 	From there i went to work at <a href="http://negocios.vodafone.pt/"> Vodafone Corporate Store </a> as a salesman at Cascais Shopping, worked at the store as a sales associate and client manager, we worked as a team of 6 people. The job composed of two sides, the first is to find the tools that fit the clients need in terms of Telecomunications. The second side is to provide customer support and manage complaints to minimize the problem and provide a fast and adequate solution. <br>
+  			This company is a Multinational company but the store team was composed of 6 member and 1 region manager.<br>
+  			Experience: 1 year
+
+  		</div>
+  		<div class="projecto" style="display: none;" id="Frogger">
+		 	From there i went to work at <a href="http://negocios.vodafone.pt/"> Vodafone Corporate Store </a> as a salesman at Cascais Shopping, worked at the store as a sales associate and client manager, we worked as a team of 6 people. The job composed of two sides, the first is to find the tools that fit the clients need in terms of Telecomunications. The second side is to provide customer support and manage complaints to minimize the problem and provide a fast and adequate solution. <br>
+  			This company is a Multinational company but the store team was composed of 6 member and 1 region manager.<br>
+  			Experience: 1 year
+
+  		</div>
+  		<div class="projecto" style="display: none;" id="Flister">
+		 	From there i went to work at <a href="http://negocios.vodafone.pt/"> Vodafone Corporate Store </a> as a salesman at Cascais Shopping, worked at the store as a sales associate and client manager, we worked as a team of 6 people. The job composed of two sides, the first is to find the tools that fit the clients need in terms of Telecomunications. The second side is to provide customer support and manage complaints to minimize the problem and provide a fast and adequate solution. <br>
+  			This company is a Multinational company but the store team was composed of 6 member and 1 region manager.<br>
+  			Experience: 1 year
+
+  		</div>
+  		<div class="projecto" style="display: none;" id="Ecommerce">
+		 	From there i went to work at <a href="http://negocios.vodafone.pt/"> Vodafone Corporate Store </a> as a salesman at Cascais Shopping, worked at the store as a sales associate and client manager, we worked as a team of 6 people. The job composed of two sides, the first is to find the tools that fit the clients need in terms of Telecomunications. The second side is to provide customer support and manage complaints to minimize the problem and provide a fast and adequate solution. <br>
+  			This company is a Multinational company but the store team was composed of 6 member and 1 region manager.<br>
+  			Experience: 1 year
+
+  		</div>
+	</div>
 </div>
 {{ end }}

@@ -4,75 +4,48 @@
   
 
 function teste1(argument) {
+    document.getElementsByClassName("active")[0].className = "";
+    document.getElementsByClassName("visible")[0].style.display = "none";
+    document.getElementsByClassName("visible")[0].className = "";
+    changeBG(argument);
+
+
   switch(argument){
     case 0:
-      document.getElementsByClassName("visible")[0].style.display = "none";
-      document.getElementsByClassName("visible")[0].className = "";
-
-      document.getElementsByClassName("active")[0].className = "";
       document.getElementById('welcome').className = "active";
-
       document.getElementById('pageContent').className = "visible";
       document.getElementById('pageContent').style.display = "block";
-      changeBG(argument);
+
       break;
 
     case 1:
-      document.getElementsByClassName("visible")[0].style.display = "none";
-      document.getElementsByClassName("visible")[0].className = "";
-
-      document.getElementsByClassName("active")[0].className = "";
       document.getElementById('skills').className = "active";
-
       document.getElementById('pageContent1').className = "visible";
       document.getElementById('pageContent1').style.display = "block";
-      changeBG(argument);
-
       break;
+
     case 2:
-      document.getElementsByClassName("visible")[0].style.display = "none";
-      document.getElementsByClassName("visible")[0].className = "";
-
-      document.getElementsByClassName("active")[0].className = "";
       document.getElementById('projects').className = "active";
-
       document.getElementById('pageContent2').className = "visible";
       document.getElementById('pageContent2').style.display = "block";
-
       break;
+
     case 3:
-
-      document.getElementsByClassName("visible")[0].style.display = "none";
-      document.getElementsByClassName("visible")[0].className = "";
-
-      document.getElementsByClassName("active")[0].className = "";
       document.getElementById('career').className = "active";
-
       document.getElementById('pageContent3').className = "visible";
       document.getElementById('pageContent3').style.display = "block";
-
       break;
+
     case 4:
-      document.getElementsByClassName("visible")[0].style.display = "none";
-      document.getElementsByClassName("visible")[0].className = "";
-
-      document.getElementsByClassName("active")[0].className = "";
       document.getElementById('about').className = "active";
-
       document.getElementById('pageContent4').className = "visible";
       document.getElementById('pageContent4').style.display = "block";
-      changeBG(argument);
       break;
+
     case 5:
-      document.getElementsByClassName("visible")[0].style.display = "none";
-      document.getElementsByClassName("visible")[0].className = "";
-
-      document.getElementsByClassName("active")[0].className = "";
       document.getElementById('contact').className = "active";
-
       document.getElementById('pageContent5').className = "visible";
       document.getElementById('pageContent5').style.display = "block";
-
       break;
   }
 }

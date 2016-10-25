@@ -2,6 +2,7 @@
 	
 <script type="text/javascript">
 
+
 var e = 99;
 var p = 99;
 
@@ -37,7 +38,8 @@ function selectProj(argument){
 			p = 99;
 			return;
 	}
-	p = argument; 
+	p = argument;
+	$('.bs-example-modal-lg').modal('show') 
 	switch(argument){
 		case 0:
 			document.getElementById('KITT').className = "projecto";
@@ -106,24 +108,38 @@ function selectProj(argument){
   		<h1 onclick="selectProj(4)">Flister comercial - Ruby on Rails</h1>
   		<h1 onclick="selectProj(5)">E-commerce codechallenge - Ruby on Rails</h1>
 
-  		<div class="" style="display: none;" id="KITT">
-		 	KITT
-  		</div>
-  		<div class="" style="display: none;" id="Naval">
-		 	Naval
-  		</div>
-  		<div class="" style="display: none;" id="server">
-		 	server
-  		</div>
-  		<div class="" style="display: none;" id="Frogger">
-  			Frogger
-  		</div>
-  		<div class="" style="display: none;" id="Flister">
-		 	Flister
-  		</div>
-  		<div class="" style="display: none;" id="Ecommerce">
-		 	Ecommerce
-  		</div>
 	</div>
+	
+</div>
+<!-- Large modal -->
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="color: white;">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+	    <div class="modal-header">
+	      	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h2 class="modal-title" id="myModalLabel">Modal title</h2>
+      	</div>
+      	<div class="modal-body">
+	  		<div class="" style="display: none;" id="KITT">
+			 	KITT
+	  		</div>
+	  		<div class="" style="display: none;" id="Naval">
+			 	Naval
+	  		</div>
+	  		<div class="" style="display: none;" id="server">
+			 	server
+	  		</div>
+	  		<div class="" style="display: none;" id="Frogger">
+	  			Frogger
+	  		</div>
+	  		<div class="" style="display: none;" id="Flister">
+			 	Flister
+	  		</div>
+	  		<div class="" style="display: none;" id="Ecommerce">
+			 	Ecommerce
+	  		</div>
+    	</div>
+		</div>
+  </div>
 </div>
 {{ end }}
